@@ -3,7 +3,7 @@
 
 const float FLOAT_EPSILON = 0.000000001;
 
-void main(int, char**) {
+int main(int, char**) {
     int a = 10, b = 11;
     if(a = b) {
         // do nothing
@@ -20,4 +20,6 @@ void main(int, char**) {
     } else {
         printf("fa < fb");
     }
+
+    return 0;
 }
