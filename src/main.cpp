@@ -1,9 +1,18 @@
 #include <stdio.h>
-// #include "log/log.h"
+#include <stdlib.h>
 
-const float FLOAT_EPSILON = 0.000000001;
+#define N 100
+
+struct Point {
+    int x;
+    int y;
+};
 
 int main(int, char**) {
-    printf("Hello world!");
+    Point a = {0, 0}, b = {10, 100};
+
+    char *dynAdress = (char *)malloc(2*N);
+    delete dynAdress;
+
     return 0;
 }
