@@ -5,20 +5,20 @@
 void printList(ListNode *head) {
     while (head)
     {
-        printf("%i\n", head->data);
+        printf("%f\n", head->data);
         head  = head->next;
     }
     printf("\n");
 }
 
-ListNode* createList (int data) {
+ListNode* createList (double data) {
     ListNode* head = (ListNode*)malloc(sizeof(ListNode));
     head->data = data;
     head->next = NULL;
     return head;
 }
 
-void pushFront (int data, ListNode** list) {
+void pushFront (double data, ListNode** list) {
     ListNode* old_head = *list;
     ListNode* head = (ListNode*)malloc(sizeof(ListNode));
     head->data = data;
@@ -26,7 +26,7 @@ void pushFront (int data, ListNode** list) {
     *list = head;
 }
 
-void pushBack (int data, ListNode* list) {
+void pushBack (double data, ListNode* list) {
     ListNode* last = (ListNode*)malloc(sizeof(ListNode));
     last->data = data;
     last->next = NULL;
@@ -37,7 +37,7 @@ void pushBack (int data, ListNode* list) {
     list->next = last;
 }
 
-void insert (int data, ListNode* list, int index) {
+void insert (double data, ListNode* list, int index) {
     ListNode* find = list;
     for (int i = 0; find->next && i < index; i++)
     {
@@ -49,10 +49,10 @@ void insert (int data, ListNode* list, int index) {
     find->next = newNode;
 }
 
-int popFront (ListNode** list) {
-    int value = (*list)->data;
+double popFront (ListNode** list) {
+    double value = (*list)->data;
     ListNode* tmp = *list;
     *list = (*list)->next;
-    delete tmp;
+    free (tmp);
     return value;
 }

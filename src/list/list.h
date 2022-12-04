@@ -1,17 +1,17 @@
 struct ListNode
 {
-    int data;
+    double data;
     ListNode *next;
 };
 
 void printList(ListNode *head);
 
-ListNode* createList (int data);
+ListNode* createList (double data);
 
-void pushFront (int data, ListNode** list);
+void pushFront (double data, ListNode** list);
 
-void pushBack (int data, ListNode* list);
+void pushBack (double data, ListNode* list);
 
-void insert (int data, ListNode* list, int index);
+void insert (double data, ListNode* list, int index);
 
-int popFront (ListNode** list);
+double popFront (ListNode** list);
